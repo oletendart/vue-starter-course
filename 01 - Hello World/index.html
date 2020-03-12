@@ -29,6 +29,12 @@
       // plain javascript ========================
       const heading = document.querySelector("h1");
       const input = document.querySelector("input");
+      //listen to the input box for typing
+      input.addEventListener("keyup", e => {
+        const test = e.target.value;
+        header.innerText = text;
+      });
+
       // with vue ===========================
     </script>
   </body>
