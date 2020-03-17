@@ -15,14 +15,18 @@
   </head>
   <body>
     <!-- our template -->
-    <section id="app" class="section container"></section>
+    <section id="app" class="section container">
+      {{ avatar }}
+
+      <img src="{{ avatar }}" />
+    </section>
 
     <!-- our javascript -->
     <script>
       const app = new Vue({
         el: "#app",
         data: {
-          picture:
+          avatar:
             "https://www.ledojomanga.com/bdd_local/upload/images/dream-team-visuel.jpg"
         }
       });
