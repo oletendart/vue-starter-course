@@ -30,12 +30,20 @@
 
     <!-- our javascript -->
     <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", celebrate);
+
       var app = new Vue({
         el: "#app",
         data: {
           name: "Chris Sevilleja",
           username: "chrisoncode",
           email: "chris@scotch.io"
+        },
+        methods: {
+          celebrate: function() {
+            alert("celebrating!");
+          }
         }
       });
     </script>
