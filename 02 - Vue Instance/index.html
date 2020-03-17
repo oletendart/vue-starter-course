@@ -30,8 +30,15 @@
 
     <!-- our javascript -->
     <script>
-      const button = document.querySelector("button");
-      button.addEventListener("click", celebrate);
+      const button1 = document.querySelector("button");
+      const button2 = document.querySelector("button");
+      const button3 = document.querySelector("button");
+      button1.addEventListener("click", celebrate);
+      button2.addEventListener("click", celebrate);
+      button3.addEventListener("click", celebrate);
+      function celebrate() {
+        alert("celebrating");
+      }
 
       var app = new Vue({
         el: "#app",
