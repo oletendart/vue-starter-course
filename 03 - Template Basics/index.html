@@ -16,10 +16,9 @@
   <body>
     <!-- our template -->
     <section id="app" class="section container">
-      {{ avatar }}
-
       <!-- binding to attributes -->
-      <img v-bind:src="avatar" height="500" width="500" />
+      <img height="500" width="500" v-bind:src="avatar" />
+      <img height="500" width="500" :src="avatar" />
 
       <div class="notification is-success" v-if="isSuccess">
         we did it! successfull !
