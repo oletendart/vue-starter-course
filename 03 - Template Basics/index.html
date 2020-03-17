@@ -18,7 +18,7 @@
     <section id="app" class="section container">
       {{ avatar }}
 
-      <img src="{{ avatar }}" />
+      <img v-bind:src="avatar" height="500" width="500" />
     </section>
 
     <!-- our javascript -->
@@ -27,7 +27,7 @@
         el: "#app",
         data: {
           avatar:
-            "https://www.ledojomanga.com/bdd_local/upload/images/dream-team-visuel.jpg"
+            "https://www.tela-botanica.org/wp-content/uploads/2019/08/tree-3822149_1920-700x466.jpg"
         }
       });
     </script>
