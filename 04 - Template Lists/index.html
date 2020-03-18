@@ -16,7 +16,11 @@
   <body>
     <!-- our template -->
     <section id="app" class="section container">
-      <ul class="user-list"></ul>
+      <ul class="user-list">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </section>
 
     <!-- our javascript -->
@@ -43,7 +47,8 @@
       ];
 
       // plain javascript ===========================
-
+      const userList = document.querySelector(".user-list");
+      users.forEach(function(user) {});
       // vue =======================================================
       const app = new Vue({
         el: "#app"
