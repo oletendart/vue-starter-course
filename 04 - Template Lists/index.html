@@ -16,11 +16,7 @@
   <body>
     <!-- our template -->
     <section id="app" class="section container">
-      <ul class="user-list">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <ul class="user-list"></ul>
     </section>
 
     <!-- our javascript -->
@@ -48,7 +44,14 @@
 
       // plain javascript ===========================
       const userList = document.querySelector(".user-list");
-      users.forEach(function(user) {});
+      users.forEach(function(user) {
+        const userItem = document.createElement("li");
+        userItem.innerHTML = `
+        <img src="${user.avatar}" width="200" height="200"><br />
+        Name: ${user.name}<br />
+        Username: ${user.username}
+        `;
+      });
       // vue =======================================================
       const app = new Vue({
         el: "#app"
