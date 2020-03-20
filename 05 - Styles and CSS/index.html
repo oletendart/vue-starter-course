@@ -18,7 +18,7 @@
     <section id="app" class="section container">
       <!-- Inline Classes ========================================= -->
       <h2 class="title">Inline Classes</h2>
-      <div class="notification">
+      <div class="notification" v-bind:class="{ 'is-success': isSuccessful }">
         I an a notification !
       </div>
       <!-- Object Classes ========================================= -->
