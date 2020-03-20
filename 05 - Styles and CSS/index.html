@@ -24,6 +24,8 @@
       >
         I an a notification !
       </div>
+
+      <a class="button is-info" v-on:click="celebrate">We did it !</a>
       <!-- Object Classes ========================================= -->
       <h2 class="title">Object Classes</h2>
 
@@ -45,8 +47,14 @@
       const app = new Vue({
         el: "#app",
         data: {
-          isSuccessful: true,
-          isLarge: true
+          isSuccessful: false,
+          isLarge: false
+        },
+        methods: {
+          celebrate: function() {
+            this.isSuccessful = true;
+            this.isLarge = true;
+          }
         }
       });
     </script>
