@@ -18,7 +18,10 @@
     <section id="app" class="section container">
       <!-- Inline Classes ========================================= -->
       <h2 class="title">Inline Classes</h2>
-      <div class="notification" v-bind:class="{ 'is-success': isSuccessful }">
+      <div
+        class="notification"
+        v-bind:class="{ 'is-success': isSuccessful, 'is-size-1': isLarge }"
+      >
         I an a notification !
       </div>
       <!-- Object Classes ========================================= -->
@@ -42,7 +45,8 @@
       const app = new Vue({
         el: "#app",
         data: {
-          isSuccessful: true
+          isSuccessful: true,
+          isLarge: true
         }
       });
     </script>
