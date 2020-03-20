@@ -51,12 +51,19 @@
       const app = new Vue({
         el: "#app",
         data: {
+          // inline classes
           isSuccessful: false,
           isLarge: false,
+
+          // object classes
           notificationStyles: {
             "is-success": true,
             "is-size-1": true
-          }
+          },
+
+          // array classes
+          color: "",
+          size: ""
         },
         methods: {
           celebrate: function() {
