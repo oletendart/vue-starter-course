@@ -18,7 +18,7 @@
     <section id="app" class="section container">
       <!-- Inline Classes ========================================= -->
       <h2 class="title">Inline Classes</h2>
-      <div class="notification is-success">
+      <div class="notification">
         I an a notification !
       </div>
       <!-- Object Classes ========================================= -->
@@ -40,7 +40,10 @@
     <!-- our javascript -->
     <script>
       const app = new Vue({
-        el: "#app"
+        el: "#app",
+        data: {
+          isSuccessful: true
+        }
       });
     </script>
   </body>
