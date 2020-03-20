@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Learning Vue Like a Boss!</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learning Vue Like a Boss!</title>
 
-  <!-- css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css"
+    />
 
-  <!-- js -->
-  <script src="https://unpkg.com/vue"></script>
-</head>
-<body>
-  <!-- our template -->
-  <section id="app" class="section container">
+    <!-- js -->
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <!-- our template -->
+    <section id="app" class="section container">
+      <!-- Inline Classes ========================================= -->
+      <h2 class="title">Inline Classes</h2>
+      <div class="notification is-success">
+        I an a notification !
+      </div>
+      <!-- Object Classes ========================================= -->
+      <h2 class="title">Object Classes</h2>
 
-    <!-- Inline Classes ========================================= -->
-    <h2 class="title">Inline Classes</h2>
+      <!-- Array Classes ========================================= -->
+      <h2 class="title">Array Classes</h2>
 
-    <!-- Object Classes ========================================= -->
-    <h2 class="title">Object Classes</h2>
+      <!-- ================================================== -->
+      <hr />
 
-    <!-- Array Classes ========================================= -->
-    <h2 class="title">Array Classes</h2>
+      <!-- Inline Styles ========================================= -->
+      <h2 class="title">Inline Styles</h2>
 
-    <!-- ================================================== -->
-    <hr>
+      <!-- Object Styles ========================================= -->
+      <h2 class="title">Object Styles</h2>
+    </section>
 
-    <!-- Inline Styles ========================================= -->
-    <h2 class="title">Inline Styles</h2>
-
-    <!-- Object Styles ========================================= -->
-    <h2 class="title">Object Styles</h2>
-
-  </section>
-
-  <!-- our javascript -->
-  <script>
-    const app = new Vue({
-      el: '#app'
-    });
-  </script>
-</body>
+    <!-- our javascript -->
+    <script>
+      const app = new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
 </html>
