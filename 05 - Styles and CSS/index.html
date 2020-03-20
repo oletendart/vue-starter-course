@@ -26,8 +26,12 @@
       </div>
 
       <a class="button is-info" v-on:click="celebrate">We did it !</a>
+
       <!-- Object Classes ========================================= -->
       <h2 class="title">Object Classes</h2>
+      <div class="notification" v-bind:class="notificationStyles">
+        I an a notification !
+      </div>
 
       <!-- Array Classes ========================================= -->
       <h2 class="title">Array Classes</h2>
@@ -48,7 +52,11 @@
         el: "#app",
         data: {
           isSuccessful: false,
-          isLarge: false
+          isLarge: false,
+          notificationStyles: {
+            "is-success": true,
+            "is-size-1": true
+          }
         },
         methods: {
           celebrate: function() {
