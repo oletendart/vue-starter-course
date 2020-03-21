@@ -80,8 +80,8 @@
 
       <!-- Object Styles ========================================= -->
       <h2 class="title">Object Styles</h2>
-      <div class="message" :style="myMessageStyles">
-        <div class="message-body">
+      <div class="message">
+        <div class="message-body" :style="myMessageStyles">
           I am a notification
         </div>
       </div>
@@ -106,10 +106,16 @@
           color: "",
           size: "",
 
-          // inline styles
+          // inline & object styles
           myColor: "red",
           mySize: "20px",
-          myBgColor: "#AAA"
+          myBgColor: "#AAA",
+
+          myMessageStyles: {
+            color: "#EEE",
+            fontSize: "20px",
+            backgroundColor: "#555"
+          }
         },
         methods: {
           celebrate: function() {
