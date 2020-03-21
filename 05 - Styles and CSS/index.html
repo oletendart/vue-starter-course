@@ -71,7 +71,10 @@
 
       <!-- Inline Styles ========================================= -->
       <h2 class="title">Inline Styles</h2>
-      <div class="notification" v-bind:style="{color: myColor, size: mySize}">
+      <div
+        class="notification"
+        v-bind:style="{color: myColor, size: mySize, backgroundColor: myBgColor}"
+      >
         I am a notification
       </div>
 
@@ -100,7 +103,8 @@
 
           // inline styles
           myColor: "red",
-          mySize: ""
+          mySize: "20px",
+          myBgColor: "#AAA"
         },
         methods: {
           celebrate: function() {
