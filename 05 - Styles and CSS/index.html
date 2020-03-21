@@ -80,11 +80,10 @@
 
       <!-- Object Styles ========================================= -->
       <h2 class="title">Object Styles</h2>
-      <div
-        class="notification"
-        v-bind:style="{color: myColor, size: mySize, backgroundColor: myBgColor}"
-      >
-        I am a notification
+      <div class="message" :style="myMessageStyles">
+        <div class="message-body">
+          I am a notification
+        </div>
       </div>
     </section>
 
