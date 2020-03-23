@@ -61,14 +61,18 @@
       const app = new Vue({
         el: "#app",
         data: {
-          isOpen: true,
-          accordionClasses: {
-            "is-closed": this.isOpen
-          }
+          isOpen: false
         },
         methods: {
           toggleAccordion: function() {
             this.isOpen = !this.isOpen;
+          }
+        },
+        computed: {
+          accordionClasses: function() {
+            return {
+              "is-closed": this.isOpen
+            };
           }
         }
       });
