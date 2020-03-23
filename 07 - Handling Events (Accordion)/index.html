@@ -38,7 +38,7 @@
   <body>
     <!-- our template -->
     <section id="app" class="section container">
-      <article class="message is-primary" :class="accordionClasses">
+      <article class="message" :class="accordionClasses">
         <div class="message-header" @click="toggleAccordion">Hello World</div>
         <div class="message-body">
           <div class="message-content">
@@ -74,7 +74,9 @@
         computed: {
           accordionClasses: function() {
             return {
-              "is-closed": this.isOpen
+              "is-closed": this.isOpen,
+              "is-primary": this.isOpen,
+              "is-dark": !this.isOpen
             };
           }
         }
