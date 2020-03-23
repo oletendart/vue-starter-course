@@ -32,7 +32,11 @@
         >
       </div>
       <!-- crazy button -->
-      <a class="button is-info is-crazy" :style="" @mouseenter="">
+      <a
+        class="button is-info is-crazy"
+        :style="buttonOffsets"
+        @mouseenter="moveButton"
+      >
         Catch me if you can !
       </a>
     </section>
@@ -57,7 +61,11 @@
       const app = new Vue({
         el: "#app",
         data: {
-          count: 0
+          count: 0,
+          buttonOffsets: {
+            top: null,
+            left: null
+          }
         },
         methods: {
           incrementCounter: function() {
