@@ -48,7 +48,13 @@
 
     <!-- our javascript -->
     <script>
-      document.querySelector(".message-header").addEventListener("click");
+      document
+        .querySelector(".message-header")
+        .addEventListener("click", toggleAccordion);
+
+      function toggleAccordion() {
+        document.querySelector(".message").classList.add("is-closed");
+      }
 
       const app = new Vue({
         el: "#app",
