@@ -64,7 +64,7 @@
       const app = new Vue({
         el: "#app",
         data: {
-          isOpen: false
+          isOpen: true
         },
         methods: {
           toggleAccordion: function() {
@@ -74,7 +74,7 @@
         computed: {
           accordionClasses: function() {
             return {
-              "is-closed": this.isOpen,
+              "is-closed": !this.isOpen,
               "is-primary": this.isOpen,
               "is-dark": !this.isOpen
             };
