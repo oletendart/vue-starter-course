@@ -29,6 +29,13 @@
 
     <!-- our javascript -->
     <script>
+      const countPosition = document.querySelector("h2.title");
+      const incrementButton = document.querySelector(".button");
+
+      incrementButton.addEventListener("click", incrementCounter);
+      function incrementCounter(e) {
+        e.preventDefault();
+      }
       // const app = new Vue({
       //   el: "#app",
       //   data: {
