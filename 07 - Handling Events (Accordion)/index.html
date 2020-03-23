@@ -21,7 +21,7 @@
         overflow: hidden;
         transition: 0.3s ease all;
       }
-      .closed .message-body {
+      .is-closed .message-body {
         max-height: 0;
       }
       .message-content {
@@ -35,14 +35,13 @@
   <body>
     <!-- our template -->
     <section id="app" class="section container">
-      <article class="message">
-        <div class="message-header">
-          <p>Hello World</p>
-          <button class="delete" aria-label="delete"></button>
-        </div>
+      <article class="message is-primary">
+        <div class="message-header" @click="toggleAccordion">Hello World</div>
         <div class="message-body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Pellentesque risus mi</strong>
+          <div class="message-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <strong>Pellentesque risus mi</strong>
+          </div>
         </div>
       </article>
     </section>
@@ -50,7 +49,11 @@
     <!-- our javascript -->
     <script>
       const app = new Vue({
-        el: "#app"
+        el: "#app",
+        data: {},
+        methods: {
+          toggleAccordion: function() {}
+        }
       });
     </script>
   </body>
