@@ -9,7 +9,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css"
     />
-    <style></style>
+    <style>
+      .is-crazy {
+        position: absolute;
+        transition: 0.3s ease all;
+      }
+    </style>
 
     <!-- js -->
     <script src="https://unpkg.com/vue"></script>
@@ -27,7 +32,7 @@
         >
       </div>
       <!-- crazy button -->
-      <a class="button is-info is-crazy">
+      <a class="button is-info is-crazy" :style="" @mouseenter="">
         Catch me if you can !
       </a>
     </section>
