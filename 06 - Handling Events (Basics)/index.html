@@ -27,33 +27,39 @@
         >
       </div>
       <!-- crazy button -->
+      <a class="button is-info is-crazy">
+        Catch me if you can !
+      </a>
     </section>
 
     <!-- our javascript -->
     <script>
-      let count = 0;
-      const countPosition = document.querySelector("h2.title");
-      const incrementButton = document.querySelector(".button");
+      // let count = 0;
+      // const countPosition = document.querySelector("h2.title");
+      // const incrementButton = document.querySelector(".button");
 
-      countPosition.innerText = count;
+      // countPosition.innerText = count;
 
-      incrementButton.addEventListener("click", incrementCounter);
-      function incrementCounter(e) {
-        e.preventDefault();
-        count += 1;
-        countPosition.innerText = count;
-      }
-      // const app = new Vue({
-      //   el: "#app",
-      //   data: {
-      //     count: 0
-      //   },
-      //   methods: {
-      //     incrementCounter: function() {
-      //       this.count += 1;
-      //     }
-      //   }
-      // });
+      // incrementButton.addEventListener("click", incrementCounter);
+      // function incrementCounter(e) {
+      //   e.preventDefault();
+      //   count += 1;
+      //   countPosition.innerText = count;
+      // }
+
+      // Vue JS =================================
+
+      const app = new Vue({
+        el: "#app",
+        data: {
+          count: 0
+        },
+        methods: {
+          incrementCounter: function() {
+            this.count += 1;
+          }
+        }
+      });
     </script>
   </body>
 </html>
