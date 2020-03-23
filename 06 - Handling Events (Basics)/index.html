@@ -72,7 +72,10 @@
             this.count += 1;
           },
           moveButton: function(e) {
-            console.log(e);
+            this.buttonOffsets = {
+              top: `${Math.random() * window.innerHeight}px`,
+              left: `${Math.random() * window.innerWidth}px`
+            };
           }
         }
       });
