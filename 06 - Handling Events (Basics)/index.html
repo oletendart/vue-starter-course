@@ -35,6 +35,8 @@
       const countPosition = document.querySelector("h2.title");
       const incrementButton = document.querySelector(".button");
 
+      countPosition.innerText = count;
+
       incrementButton.addEventListener("click", incrementCounter);
       function incrementCounter(e) {
         e.preventDefault();
