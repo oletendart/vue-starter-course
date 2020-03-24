@@ -95,7 +95,10 @@
             alert("Processing!");
           },
           validateEmail: function() {
-            this.errors.email = window.isValidEmail();
+            const isValid = window.isValidEmail(this.email);
+
+            console.log(isValid);
+            this.errors.email = isValid;
           }
         }
       });
