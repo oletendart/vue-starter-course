@@ -93,6 +93,9 @@
           processForm: function() {
             console.log({ name: this.name, email: this.email });
             alert("Processing!");
+          },
+          validateEmail: function() {
+            this.errors.email = window.isValidEmail();
           }
         }
       });
