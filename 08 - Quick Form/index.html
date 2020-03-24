@@ -59,6 +59,10 @@
       const signupForm = document.getElementById("signup-form");
       const nameInput = signupForm.querySelector("input[name=name]");
       const emailInput = signupForm.querySelector("input[name=name]");
+
+      // listen for the submit event
+      signupForm.addEventListener("submit", processSignupForm);
+
       // vue ==========================================
 
       // helpers ===============================================
