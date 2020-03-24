@@ -62,7 +62,12 @@
 
       // listen for the submit event
       signupForm.addEventListener("submit", processSignupForm);
+      function processSignupForm(e) {
+        e.preventDefault();
 
+        const name = nameInput.value;
+        const email = emailInput.value;
+      }
       // vue ==========================================
 
       // helpers ===============================================
