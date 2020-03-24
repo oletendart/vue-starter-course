@@ -86,7 +86,7 @@
           email: "",
           errors: {
             name: false,
-            email: true
+            email: false
           }
         },
         methods: {
@@ -96,9 +96,7 @@
           },
           validateEmail: function() {
             const isValid = window.isValidEmail(this.email);
-
-            console.log(isValid);
-            this.errors.email = isValid;
+            this.errors.email = !isValid;
           }
         }
       });
