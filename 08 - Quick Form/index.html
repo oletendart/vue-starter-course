@@ -27,7 +27,7 @@
           <h1 class="title has-text-centered">Vue.js Form Processing</h1>
           <div class="box">
             <!-- our signup form ===================== -->
-            <form id="signup-form">
+            <form id="signup-form" @submit.prevent="processForm">
               <!-- name -->
               <div class="field">
                 <label class="label">Name</label>
@@ -82,7 +82,11 @@
         el: "#signup-form",
         data: {
           name: "",
-          email: ""
+          email: "",
+          errors: {
+            name: false,
+            email: false
+          }
         },
         methods: {
           processForm: function() {
