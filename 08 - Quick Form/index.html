@@ -42,6 +42,7 @@
                   class="input"
                   name="email"
                   v-model="email"
+                  @blur="validateEmail"
                 />
               </div>
 
@@ -85,7 +86,7 @@
           email: "",
           errors: {
             name: false,
-            email: false
+            email: true
           }
         },
         methods: {
