@@ -31,13 +31,18 @@
               <!-- name -->
               <div class="field">
                 <label class="label">Name</label>
-                <input type="text" class="input" name="name" />
+                <input type="text" class="input" name="name" v-model="name" />
               </div>
 
               <!-- email -->
               <div class="field">
                 <label class="label">Email</label>
-                <input type="email" class="input" name="email" />
+                <input
+                  type="email"
+                  class="input"
+                  name="email"
+                  v-model="email"
+                />
               </div>
 
               <!-- submit button -->
@@ -56,23 +61,27 @@
     <script>
       // plain javscript ==================================
       // grab the things we need
-      const signupForm = document.getElementById("signup-form");
-      const nameInput = signupForm.querySelector("input[name=name]");
-      const emailInput = signupForm.querySelector("input[name=name]");
+      // const signupForm = document.getElementById("signup-form");
+      // const nameInput = signupForm.querySelector("input[name=name]");
+      // const emailInput = signupForm.querySelector("input[name=name]");
 
-      // listen for the submit event
-      signupForm.addEventListener("submit", processSignupForm);
-      function processSignupForm(e) {
-        e.preventDefault();
+      // // listen for the submit event
+      // signupForm.addEventListener("submit", processSignupForm);
+      // function processSignupForm(e) {
+      //   e.preventDefault();
 
-        const name = nameInput.value;
-        const email = emailInput.value;
+      //   const name = nameInput.value;
+      //   const email = emailInput.value;
 
-        console.log({ name, email });
-        alert("Processing!");
-      }
+      //   console.log({ name, email });
+      //   alert("Processing!");
+      // }
+
       // vue ==========================================
-
+      const app = new Vue({
+        el: "#signup-form",
+        data: {}
+      });
       // helpers ===============================================
       /**
        * Validate emails
