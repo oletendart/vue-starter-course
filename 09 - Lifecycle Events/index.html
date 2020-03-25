@@ -19,6 +19,9 @@
 
     <!-- our javascript -->
     <script>
+      // vanilla javascript
+
+      function getUsers() {}
       const app = new Vue({
         el: "#app",
         data: {
@@ -27,6 +30,9 @@
         methods: {
           getUsers: function() {
             return [{ name: "chris", username: "chrison" }];
+          },
+          created: function() {
+            this.getUsers;
           }
         }
       });
