@@ -15,7 +15,11 @@
   </head>
   <body>
     <!-- our template -->
-    <section id="app" class="section container"></section>
+    <section id="app" class="section container">
+      {{count}}
+
+      <a class="button is-info" @click="incrementCount">Update</a>
+    </section>
 
     <!-- our javascript -->
     <script>
