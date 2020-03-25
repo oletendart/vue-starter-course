@@ -19,17 +19,14 @@
 
     <!-- our javascript -->
     <script>
-      // vanilla javascript
-
-      function getUsers() {}
       const app = new Vue({
         el: "#app",
         data: {
           users: null
         },
         methods: {
-          getUsers: function() {
-            return [{ name: "chris", username: "chrison" }];
+          incrementCount: function() {
+            this.count;
           },
           created: function() {
             this.getUsers;
