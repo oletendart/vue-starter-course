@@ -32,8 +32,11 @@
           incrementCount: function() {
             this.count += 1;
           },
+          beforeCreate: function() {
+            this.incrementCount();
+          },
           created: function() {
-            this.getUsers;
+            this.incrementCount();
           }
         }
       });
