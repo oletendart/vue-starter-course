@@ -26,11 +26,11 @@
       const app = new Vue({
         el: "#app",
         data: {
-          users: null
+          count: 0
         },
         methods: {
           incrementCount: function() {
-            this.count;
+            this.count += 1;
           },
           created: function() {
             this.getUsers;
