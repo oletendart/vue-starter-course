@@ -27,7 +27,8 @@
           // if the usage limit has been hit, visit https://developers.giphy.com to get a new one
           // 80bfcbf357864cd18518c324f47a7098
           apiUrl: "http://api.giphy.com/v1/gifs",
-          apiKey: "80bfcbf357864cd18518c324f47a7098"
+          apiKey: "80bfcbf357864cd18518c324f47a7098",
+          gifs: null
         },
         methods: {
           fetchGifs: function() {
@@ -36,7 +37,7 @@
             fetch(url)
               .then(response => response.json())
               .then(data => {
-                console.log(data.data);
+                this.gifs = data.data;
               });
           },
           created: function() {
