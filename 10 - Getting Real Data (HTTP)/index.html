@@ -16,7 +16,11 @@
   </head>
   <body>
     <!-- our template -->
-    <section id="app" class="section container"></section>
+    <section id="app" class="section container">
+      <div v-if="gifs" v-for="gif in gifs">
+        <img src="" alt="" />
+      </div>
+    </section>
 
     <!-- our javascript -->
     <script>
@@ -28,22 +32,22 @@
           // 80bfcbf357864cd18518c324f47a7098
           apiUrl: "http://api.giphy.com/v1/gifs",
           apiKey: "80bfcbf357864cd18518c324f47a7098",
-          gifs: null
+          gifs: null,
         },
         methods: {
-          fetchGifs: function() {
+          fetchGifs: function () {
             const url = `${this.apiUrl}/trending?api_key=${this.apiKey}`;
 
             fetch(url)
-              .then(response => response.json())
-              .then(data => {
+              .then((response) => response.json())
+              .then((data) => {
                 this.gifs = data.data;
               });
           },
-          created: function() {
+          created: function () {
             this.fetchGifs();
-          }
-        }
+          },
+        },
       });
     </script>
   </body>
