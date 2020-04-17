@@ -42,6 +42,7 @@
               .then((response) => response.json())
               .then((data) => {
                 this.gifs = data.data;
+                console.log(data.data[0]);
               });
           },
           created: function () {
